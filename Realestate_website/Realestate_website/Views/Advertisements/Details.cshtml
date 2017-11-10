@@ -1,0 +1,112 @@
+﻿@model PutAdViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+
+
+<div>
+    <h4>Advertisement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.ID)
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Studio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Studio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OneRoom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OneRoom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TwoRooms)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TwoRooms)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThreeRooms)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThreeRooms)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contact)
+        </dd>
+    </dl>
+
+    
+</div>
+
+
+<div>
+    <a asp-controller="Advertisements" asp-action="Index">Back to List</a>
+</div>
+
+<div id="addsPlaceholder">
+    @Html.Partial("_DetailsPartial", Model.Comments)
+</div>
+            <input type="text" id="textComment" value="" style="width:500px; height:35px;"><br />
+            <input id="textButton" type="submit" value="Add Comment" class="btn btn-default" />
+            <input hidden id="Ad_id" value="@Model.ID"/>
+<script src="~/js/addcomment.js"></script>
+
+
+
+
+
+
+
+
+
+

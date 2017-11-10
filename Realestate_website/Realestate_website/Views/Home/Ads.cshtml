@@ -1,0 +1,106 @@
+﻿@model PutAdViewModel
+
+
+@{
+    ViewData["Title"] = "Ads";
+}
+
+<h2>List of all advertisements</h2>
+
+<form asp-controller="Advertisements" asp-action="Index">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.UserID)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Advertisements != null)
+            {
+                @foreach (var item in Model.Advertisements)
+                {
+                    <tr>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.ID)
+                        </td>*@
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserID)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.City)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+
+
+                        
+                        <td>
+                            <input asp-action="Details" asp-route-id="@item.ID" type="submit" value="Details" class="btn btn-default" />
+                            <input hidden class="Ad_id" value="@item.ID" />
+                            <input hidden class="Ad_user_id" value="@item.UserID" />
+
+                            <!-- Button trigger modal -->
+                            <button class="warning" type="button" value="@item.ID" >
+                                Edit
+                                
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="alert alert-warning">
+                                            <div class="modal-header">
+                                                <a href="#" class="glyphicon glyphicon-warning-sign"></a>
+                                                <h5 class="modal-title" id="exampleModalLongTitle" style="text-align:center"><strong>Warning</strong></h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body" style="text-align:center">
+                                                You can not edit this advertisements!
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                     
+                       </td>
+                    </tr>
+                }
+            }  
+        </tbody>
+    </table>
+    
+    <input hidden id="User_name" value="@Context.User.Identity.Name" />
+</form>
+
+<div id="addsPlaceholder"> </div>
+
+<script src="~/js/Warning.js"></script>

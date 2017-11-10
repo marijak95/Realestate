@@ -1,0 +1,30 @@
+﻿@using Realestate_website.Data.EfModels
+@model List<Comment>
+
+
+<p>**********************************************************</p>
+@*<div class="line">
+        
+</div>*@
+
+@foreach (var item in Model)
+{
+    <ul id="comments" class="comments">
+        <li class="comment">
+            <div class="clearfix">
+                <h4 class="pull-left">User ID: @item.UserId</h4>
+                <p class="pull-right">@item.DateOfComent</p>
+            </div>
+            <p>
+                <em>@item.Text</em>
+            </p>
+            <div class="pull-right">
+                <a href="/Comments/Like/@item.CommentID"><i id="like1" class="glyphicon glyphicon-thumbs-up"></i> @item.Like  </a>
+                <a href="/Comments/DIslike/@item.CommentID"><i id="dislike1" class="glyphicon glyphicon-thumbs-down"></i> @item.Dislike</a>
+            </div>
+        </li>
+    </ul>
+    <br />
+}
+
+

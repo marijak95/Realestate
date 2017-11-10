@@ -1,0 +1,292 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 25px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* buttons and links extension to use brackets: [ click me ] */
+.btn-bracketed::before {
+    display: inline-block;
+    content: "[";
+    padding-right: 0.5em;
+}
+
+.btn-bracketed::after {
+    display: inline-block;
+    content: "]";
+    padding-left: 0.5em;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+
+h3.heading {
+    margin-left: 20px;
+    background-color: #fafafa;
+    font-size: 25px;
+    float: left;
+    padding-left: 40px;
+    position: relative;
+    width: 405px;
+    height: 40px;
+    padding-top: 5px;
+}
+
+#upper_blank {
+    border-bottom: 7px solid steelblue;
+    margin-top: 40px;
+    margin-right: 485px;
+    width: 570px;
+    padding-right: 480px;
+}
+
+p {
+    margin-left: 5px;
+    padding: 8px;
+    padding-left: 20px;
+}
+
+#name {
+    margin-left: 20px;
+    box-shadow: 0 2px 0 #e6e6e6;
+    height: 40px;
+    padding-left: 10px;
+    width: 500px;
+}
+
+#email {
+    margin-left: 20px;
+    box-shadow: 0 2px 0 #e6e6e6;
+    height: 40px;
+    padding-left: 10px;
+    width: 500px;
+}
+
+#url {
+    margin-left: 20px;
+    box-shadow: 0 2px 0 #e6e6e6;
+    height: 40px;
+    padding-left: 10px;
+    width: 500px;
+}
+
+#comment {
+    margin-left: 20px;
+    box-shadow: 0 2px 0 #e6e6e6;
+    height: 40px;
+    padding-left: 10px;
+    width: 650px;
+    height: 200px;
+}
+
+#commentSubmit {
+    margin-left: 20px;
+    width: 250px;
+    height: 55px;
+    color: white;
+    font-size: 20px;
+    background-color: #2c95dc;
+    box-shadow: 0 3px 0 #09466f;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+    #commentSubmit:hover {
+        background-color: #09466f;
+    }
+
+p {
+    font-size: 18px;
+    color: gray;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+p1 {
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+h3.second_heading {
+    margin-left: 0;
+    margin-top: 30px;
+    font-size: 20px;
+    width: 250px;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 55px;
+}
+
+#middle {
+    border: 1px solid lightgray;
+    width: 1000px;
+    height: 200px;
+    background-color: lightyellow;
+    margin-left: 45px;
+    text-align: left;
+    margin-top: 10px;
+    box-shadow: 0 2px 0 lightgray;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    /* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+.warning {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    /* When moving the mouse over the submit button, add a darker green color */
+    .warning:hover {
+        background-color: #45a049;
+    }
+
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+
+
+
+/*The alert message box */
+.alert {
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    font: 32px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    /* When moving the mouse over the close button */
+.closebtn:hover {
+        color: black;
+    }
+
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+
+.navbar-right {
+    margin-right: 5px;
+}
+
+.modal-content{
+    border: 2px solid thin;
+}
+
+
+.line {
+    width: 1150px;
+    height: 1px;
+    border-bottom: 1px solid black;
+    position: absolute;
+}
+
+
+
+
+

@@ -1,0 +1,107 @@
+@model Realestate_website.Models.PutAdViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PutAdViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="ID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contact)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Studio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Studio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OneRoom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OneRoom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TwoRooms)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TwoRooms)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThreeRooms)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThreeRooms)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceDesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PriceDesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceAsc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PriceAsc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ByDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ByDate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

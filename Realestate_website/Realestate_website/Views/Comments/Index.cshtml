@@ -1,0 +1,49 @@
+@model CommentViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Comments</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateOfComent)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Text)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Like)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dislike)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Comments) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfComent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Text)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Like)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dislike)
+                </td>
+                <td>
+                    <a asp-action="Like" asp-route-id="@item.CommentID">Like</a> |
+                    <a asp-action="Dislike" asp-route-id="@item.CommentID">Dislike</a>
+                </td>
+            </tr>
+    }
+    </tbody>
+</table>
